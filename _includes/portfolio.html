@@ -2,76 +2,140 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <h2 class="section-heading">Personal Projects <i style="color:#21cddb" class="fa fa fa-code wow bounceIn text-primary"></i></h2>
+                <h2 class="section-heading">Personal Projects <i style="color:#21cddb"
+                                                                 class="fa fa fa-code wow bounceIn text-primary"></i>
+                </h2>
                 <p>These are a collection of projects I have been completed on my own free time</p>
-                <hr>
-                {% if site.data-ad-client %}
-                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                <!-- jekynewage -->
-                <ins class="adsbygoogle"
-                    style="display:block"
-                    data-ad-client="{{ site.data-ad-client }}"
-                    data-ad-slot="{{ site.data-ad-slot }}"
-                    data-ad-format="auto"></ins>
-                <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-                {% endif %}
             </div>
         </div>
     </div>
 </section>
 
 <section class="no-padding" id="portfolio">
-    <div class="container-fluid">
-        <div class="row no-gutter">
-            <div class="col-lg-4 col-md-6">
-                <a target="_blank" href="https://github.com/Return0Software/Flix-with-Friends" class="portfolio-box">
-                    <img src="/img/portfolio/film.jpg" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Python
-                            </div>
-                            <div class="project-name">
-                                Flix with Friends
-                            </div>
-                            <h5>Flix with Friends is a program that helps users decide what movie they should watch. It reads through spreadsheets or Google Sheets that have names of movies that users would like to watch. The program searches through a movie database to pull descriptions, ratings and various poster sizes to present in an IMDb-like interface to help users decide on what movie to watch based on search criteria like keywords, release date, rating and which of the users has seen the movie.</h5>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <a target="blank" href="https://github.com/JosephMart/Periodic-Table" class="portfolio-box">
-                    <img src="/img/portfolio/chem.png" class="img-responsive" alt="" height="452px">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Matlab
-                            </div>
-                            <div class="project-name">
-                                Periodic Table GUI
-                            </div>
-                            <h5>The main function is eleminfo(). The function will display a periodic table of elements for eleminfo(0). Currently, only one element can be selected for information. Another use of the function is to either type in an element name or symbol. The name or symbol must be string, i.e. eleminfo('He'). For element symbols, the first letter must be capitalized.</h5>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <a class="portfolio-box">
-                    <img src="/img/portfolio/3.jpg" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Photography
-                            </div>
-                            <div class="project-name">
-                                Coming Soon
+    <div class="message">
+        <div class="container-fluid">
+            <div class="row no-gutter">
+                <div class="col-lg-4 col-md-6">
+                    <a target="_blank" href="https://github.com/Return0Software/Flix-with-Friends"
+                       class="portfolio-box">
+                        <img src="/img/portfolio/film.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Python
+                                </div>
+                                <div class="project-name">
+                                    Flix with Friends
+                                </div>
+                                <h5>Flix with Friends is a program that helps users decide what movie they should watch.
+                                    It reads through spreadsheets or Google Sheets that have names of movies that users
+                                    would like to watch. The program searches through a movie database to pull
+                                    descriptions, ratings and various poster sizes to present in an IMDb-like interface
+                                    to help users decide on what movie to watch based on search criteria like keywords,
+                                    release date, rating and which of the users has seen the movie.</h5>
                             </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <a target="blank" href="https://github.com/JosephMart/Periodic-Table" class="portfolio-box">
+                        <img src="/img/portfolio/chem.png" class="img-responsive" alt="" height="452px">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Matlab
+                                </div>
+                                <div class="project-name">
+                                    Periodic Table GUI
+                                </div>
+                                <h5>The main function is eleminfo(). The function will display a periodic table of
+                                    elements for eleminfo(0). Currently, only one element can be selected for
+                                    information. Another use of the function is to either type in an element name or
+                                    symbol. The name or symbol must be string, i.e. eleminfo('He'). For element symbols,
+                                    the first letter must be capitalized.</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <a class="portfolio-box">
+                        <img src="/img/portfolio/3.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Photography
+                                </div>
+                                <div class="project-name">
+                                    Coming Soon
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-</section>
+    <section class="section">
+        <div class="grid">
+            <div class="item item--large portfolio-box" id="flix-with-friends"
+                 style="background-image: url('/img/portfolio/FLIX_W_FRIENDS_1.jpg');"
+                 onclick="navigatTo('https://github.com/Return0Software/Flix-with-Friends')">
+                <div class="portfolio-box-caption">
+                    <div class="portfolio-box-caption-content">
+                        <div class="project-category text-faded">
+                            Python
+                        </div>
+                        <div class="project-name">
+                            Flix with Friends
+                        </div>
+                        <h5>Flix with Friends is a program that helps users decide what movie they should watch. It
+                            reads through spreadsheets or Google Sheets that have names of movies that users would like
+                            to watch. The program searches through a movie database to pull descriptions, ratings and
+                            various poster sizes to present in an IMDb-like interface to help users decide on what movie
+                            to watch based on search criteria like keywords, release date, rating and which of the users
+                            has seen the movie.</h5>
+                    </div>
+                </div>
+                <div class="item__details">
+                    Flix with Friends
+                </div>
+
+            </div>
+            <div class="item item--large portfolio-box" style="background-image: url('/img/portfolio/chem.png')"
+                 onclick="navigatTo('https://github.com/JosephMart/Periodic-Table')">
+                <div class="portfolio-box-caption">
+                    <div class="portfolio-box-caption-content">
+                        <div class="project-category text-faded">
+                            Matlab
+                        </div>
+                        <div class="project-name">
+                            Periodic Table GUI
+                        </div>
+                        <h5>The main function is eleminfo(). The function will display a periodic table of elements for
+                            eleminfo(0). Currently, only one element can be selected for information. Another use of the
+                            function is to either type in an element name or symbol. The name or symbol must be string,
+                            i.e. eleminfo('He'). For element symbols, the first letter must be capitalized.</h5>
+                    </div>
+                </div>
+                <div class="item__details">
+                    Periodic Table GUI
+                </div>
+            </div>
+            <div class="item item--large portfolio-box" style="background-image: url('/img/portfolio/3.jpg')">
+                <div class="portfolio-box-caption">
+                    <div class="portfolio-box-caption-content">
+                        <div class="project-category text-faded">
+                            Photography
+                        </div>
+                        <div class="project-name">
+                            Coming Soon
+                        </div>
+                    </div>
+                </div>
+                <div class="item__details">
+                    Photography
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
