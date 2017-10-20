@@ -6,8 +6,7 @@
   "author": "Start Bootstrap",
   "scripts": {
     "dev": "gulp dev | jekyll build --watch",
-    "gulpdev": "gulp dev",
-    "jekyllBuild": "jekyll --build watch"
+    "build": "jekyll build"
   },
   "license": {
     "type": "MIT",
