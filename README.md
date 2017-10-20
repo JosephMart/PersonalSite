@@ -6,6 +6,5 @@
 2. Install the following gems: `jekyll-feed` and `jekyll-paginate`
 3. To run
 ```
-gulp dev
-jekyll build --watch
+npm run dev
 ```

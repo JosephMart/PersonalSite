@@ -1,9 +1,14 @@
 {
-  "name": "new-age",
-  "title": "New Age",
-  "version": "3.3.7",
+  "name": "my_site",
+  "title": "Joseph Martinsn Personal Site",
+  "version": "1.0.0",
   "homepage": "http://startbootstrap.com/template-overviews/new-age",
   "author": "Start Bootstrap",
+  "scripts": {
+    "dev": "gulp dev | jekyll build --watch",
+    "gulpdev": "gulp dev",
+    "jekyllBuild": "jekyll --build watch"
+  },
   "license": {
     "type": "MIT",
     "url": "https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE"

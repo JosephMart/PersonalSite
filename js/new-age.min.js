@@ -1,5 +1,5 @@
 /*!
- * Start Bootstrap - New Age v3.3.7 (http://startbootstrap.com/template-overviews/new-age)
+ * Start Bootstrap - Joseph Martinsn Personal Site v1.0.0 (http://startbootstrap.com/template-overviews/new-age)
  * Copyright 2013-2017 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */

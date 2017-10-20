@@ -1,8 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<!--
+       _                                _         __  __                  _     _                                _            _____   _   _
+      | |                              | |       |  \/  |                | |   (_)                              ( )          / ____| (_) | |
+      | |   ___    ___    ___   _ __   | |__     | \  / |   __ _   _ __  | |_   _   _ __    ___    ___   _ __   |/   ___    | (___    _  | |_    ___
+  _   | |  / _ \  / __|  / _ \ | '_ \  | '_ \    | |\/| |  / _` | | '__| | __| | | | '_ \  / __|  / _ \ | '_ \      / __|    \___ \  | | | __|  / _ \
+ | |__| | | (_) | \__ \ |  __/ | |_) | | | | |   | |  | | | (_| | | |    | |_  | | | | | | \__ \ |  __/ | | | |     \__ \    ____) | | | | |_  |  __/
+  \____/   \___/  |___/  \___| | .__/  |_| |_|   |_|  |_|  \__,_| |_|     \__| |_| |_| |_| |___/  \___| |_| |_|     |___/   |_____/  |_|  \__|  \___|
+                               | |
+-->
 
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,14 +41,18 @@
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    
-    <!-- Google ADS mobile block -->
-    
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107263159-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments)};
+        gtag('js', new Date());
 
-    
+        gtag('config', 'UA-107263159-1');
+    </script>
 
 </head>
 
@@ -112,9 +125,27 @@
             <div class="col-lg-12 text-center">
                 <h2 class="section-heading">About Me</h2>
                 <hr class="primary">
-                <br />
+                <br/>
                 <p>
-                    I am currently a Sophomore Computer Engineering student at Texas A&amp;M planning on graduating in 2019 with minors in Cybersecurity and Math.
+                    Currently, I am in my junior year at Texas A&M University where I am in the process of earning an
+                    undergraduate degree in Computer Engineering, Computer Science track. I am also pursuing minors
+                    in Mathematics and Cybersecurity.
+                </p>
+                <p>
+                    My past experiences include a position as an Assistant Warehouse Manager for Melody
+                    International which allowed me to develop skills in a fast-paced work environment. I have also
+                    worked as an IT Student Technician where I interacted directly with customers on a daily basis in
+                    order to resolve any issues they experienced. As an Undergraduate Teaching Fellow, I had the
+                    opportunity to teach other students close to my age a technical subject as well as having to prepare
+                    before hand to answer any questions about the topic at hand. Along with school, I currently work
+                    part time at a software consulting firm where I complete and develop features following the
+                    Scrum Agile framework.
+                </p>
+                <p>
+                    In order to balance school work and my work hours, I have had to rely on my strong work ethic as
+                    well as master my people and time management skills. From hours on the phone working on the
+                    computer support team to hours in the classroom helping others succeed in their academics, I
+                    always enjoy the challenge at hand.
                 </p>
             </div>
         </div>
@@ -126,17 +157,40 @@
             <div class="col-lg-12 text-center">
                 <h2 class="section-heading">Experience</h2>
                 <hr class="primary">
-                <br />
+                <br/>
             </div>
         </div>
     </div>
     <br><br><br>
     <div class="container">
         <div class="row">
-            <div class="col-lg-3 col-md-6 text-center">
+            <div class="col-lg-4 col-md-12 text-center">
+                <div class="service-box">
+                    <img src="img/frogslayer.png" alt="frogslayer" width="56px">
+                    <h3>Junior Software Developer</h3>
+                    <h5><a href="https://frogslayer.com/" target="_blank">FrogSlayer</a></h5>
+                    <ul class="text-muted text-left">
+                        <li>
+                            Primary responsibilities include developing new features, debugging and
+                            resolving issues, testing my work,researching solutions to technical problems,
+                            and communicating with clients and team leads regarding the progress of key
+                            tasks or issues following Agile and Scrum software development methodologies
+                        </li>
+                        <li>
+                            Common technologies include JavaScript, HTML5, CSS3, GitLab, MVC, Web API,
+                            HTTP, NGINX, REST, AngularJS, TypeScript, React, Redux, Django, Vagrant, and PostgreSQL
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 text-center">
                 <div class="service-box">
                     <i class="fa fa-4x fa-book wow bounceIn text-primary"></i>
                     <h3>Teaching Fellow</h3>
+                    <h5>
+                        <a href="http://www.math.tamu.edu/" target="_blank">Department of Mathematics</a><br>
+                        <small>Texas A&amp;M University</small>
+                    </h5>
                     <ul class="text-muted text-left">
                         <li>
                             Lead groups of 8-10 Undergraduate Students in Calculus II Recitations
@@ -151,16 +205,22 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 text-center">
+            <div class="col-lg-4 col-md-6 text-center">
                 <div class="service-box">
                     <i class="fa fa-4x fa-file-code-o wow bounceIn text-primary" data-wow-delay=".1s"></i>
                     <h3>App Developer</h3>
+                    <h5>
+                        <a href="http://www.math.tamu.edu/" target="_blank">Department of Mathematics</a><br>
+                        <small>Texas A&amp;M University</small>
+                    </h5>
                     <ul class="text-muted text-left">
                         <li>
-                            Worked under Dr. Philip Yasskin in modifying maplets for public distribution.
+                            Worked under <a href="http://www.math.tamu.edu/~phil.yasskin/" target="_blank">Dr. Philip
+                                Yasskin</a> in modifying maplets for public distribution.
                         </li>
                         <li>
-                            Assisted in creating a Math Homework Grading system for use by Math professors at Texas A&amp;M and other colleges
+                            Assisted in creating a Math Homework Grading system for use by Math professors at Texas A&amp;M
+                            and other colleges
                         </li>
                         <li>
                             Converted Math Textbook from LaTeX into a fully functional HTML website version
@@ -168,24 +228,40 @@
                     </ul>
                 </div>
             </div>
+
+
+        </div>
+        <!-- 2nd Row -->
+        <div class="row">
             <div class="col-lg-3 col-md-6 text-center">
                 <div class="service-box">
                     <i class="fa fa-4x fa-desktop wow bounceIn text-primary" data-wow-delay=".2s"></i>
                     <h3>Student Technician</h3>
+                    <h5>
+                        <a href="http://doit.tamu.edu/" target="_blank">
+                            Department of Student Affairs <br>
+                        </a>
+                        <small>Texas A&amp;M University</small>
+                    </h5>
                     <ul class="text-muted text-left">
                         <li>
-                            Assisted computer support team in providing support of Windows 7 and Apple Mac computers for approximately 800 users.
+                            Assisted computer support team in providing support of Windows 7 and Apple Mac computers
+                            for
+                            approximately 800 users.
                         </li>
                         <li>
-                            Involved answering the phone to troubleshoot computer issues, performing hardware and software installations, upgrades and maintenance, assisting with special projects and general service desk duties.
+                            Involved answering the phone to troubleshoot computer issues, performing hardware and
+                            software installations, upgrades and maintenance, assisting with special projects and
+                            general service desk duties.
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 text-center">
                 <div class="service-box">
-                    <i class="fa fa-4x fa-pencil-square-o wow bounceIn text-primary" data-wow-delay=".3s"></i>
+                    <img src="img/mathnasium.png" alt="mathnasium" width="66px" height="56px">
                     <h3>Math Tutor</h3>
+                    <h5><a href="http://www.mathnasium.com/pearland" target="_blank">Mathnasium</a></h5>
                     <ul class="text-muted text-left">
                         <li>
                             Assist students in elementary, middle, and high school in mathematics.
@@ -194,7 +270,43 @@
                             Worked with students in small groups of 3 to 4 to help develop their math skills
                         </li>
                         <li>
-                            Helped individual students prepare for finals and specific projects in one on one tutoring sessions
+                            Helped individual students prepare for finals and specific projects in one on one
+                            tutoring
+                            sessions
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                    <i class="fa fa-4x fa-laptop wow bounceIn text-primary"></i>
+                    <h3>Information Technology Technician</h3>
+                    <h5><a href="http://www.martinsen.com" target="_blank">Martinsen Software &amp; Electronics</a>
+                    </h5>
+                    <ul class="text-muted text-left">
+                        <li>Installing hardware and software systems</li>
+                        <li>Maintaining or repairing equipment</li>
+                        <li>Troubleshooting a variety of computer issues</li>
+                        <li>Setting up computer security measures</li>
+                        <li>Configuring computer networks</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                    <i class="fa fa-4x fa-building wow bounceIn text-primary"></i>
+                    <h3>Assistant Warehouse Manager</h3>
+                    <h5><a href="http://www.melodyinternational.com/" target="_blank">Melody International</a></h5>
+                    <ul class="text-muted text-left">
+                        <li>
+                            Maintain receiving, warehousing, and distribution operations by initiating,
+                            coordinating, and enforcing program, operational, and personnel policies and
+                            procedures
+                        </li>
+                        <li>
+                            Comply with federal, state, and local warehousing, material handling, and
+                            shipping requirements by studying existing and new legislation; enforcing
+                            adherence to requirements; advising management on needed actions.
                         </li>
                     </ul>
                 </div>
@@ -207,73 +319,148 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <h2 class="section-heading">Personal Projects <i style="color:#21cddb" class="fa fa fa-code wow bounceIn text-primary"></i></h2>
+                <h2 class="section-heading">Personal Projects <i style="color:#21cddb"
+                                                                 class="fa fa fa-code wow bounceIn text-primary"></i>
+                </h2>
                 <p>These are a collection of projects I have been completed on my own free time</p>
-                <hr>
-                
             </div>
         </div>
     </div>
 </section>
 
 <section class="no-padding" id="portfolio">
-    <div class="container-fluid">
-        <div class="row no-gutter">
-            <div class="col-lg-4 col-md-6">
-                <a target="_blank" href="https://github.com/Return0Software/Flix-with-Friends" class="portfolio-box">
-                    <img src="/img/portfolio/film.jpg" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Python
-                            </div>
-                            <div class="project-name">
-                                Flix with Friends
-                            </div>
-                            <h5>Flix with Friends is a program that helps users decide what movie they should watch. It reads through spreadsheets or Google Sheets that have names of movies that users would like to watch. The program searches through a movie database to pull descriptions, ratings and various poster sizes to present in an IMDb-like interface to help users decide on what movie to watch based on search criteria like keywords, release date, rating and which of the users has seen the movie.</h5>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <a target="blank" href="https://github.com/JosephMart/Periodic-Table" class="portfolio-box">
-                    <img src="/img/portfolio/chem.png" class="img-responsive" alt="" height="452px">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Matlab
-                            </div>
-                            <div class="project-name">
-                                Periodic Table GUI
-                            </div>
-                            <h5>The main function is eleminfo(). The function will display a periodic table of elements for eleminfo(0). Currently, only one element can be selected for information. Another use of the function is to either type in an element name or symbol. The name or symbol must be string, i.e. eleminfo('He'). For element symbols, the first letter must be capitalized.</h5>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <a class="portfolio-box">
-                    <img src="/img/portfolio/3.jpg" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Photography
-                            </div>
-                            <div class="project-name">
-                                Coming Soon
+    <div class="message">
+        <div class="container-fluid">
+            <div class="row no-gutter">
+                <div class="col-lg-4 col-md-6">
+                    <a target="_blank" href="https://github.com/Return0Software/Flix-with-Friends"
+                       class="portfolio-box">
+                        <img src="/img/portfolio/FLIX_W_FRIENDS_1.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Python
+                                </div>
+                                <div class="project-name">
+                                    Flix with Friends
+                                </div>
+                                <h5>Flix with Friends is a program that helps users decide what movie they should watch.
+                                    It reads through spreadsheets or Google Sheets that have names of movies that users
+                                    would like to watch. The program searches through a movie database to pull
+                                    descriptions, ratings and various poster sizes to present in an IMDb-like interface
+                                    to help users decide on what movie to watch based on search criteria like keywords,
+                                    release date, rating and which of the users has seen the movie.</h5>
                             </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <a target="blank" href="https://github.com/JosephMart/Periodic-Table" class="portfolio-box">
+                        <img src="/img/portfolio/chem.png" class="img-responsive" alt="" height="452px">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Matlab
+                                </div>
+                                <div class="project-name">
+                                    Periodic Table GUI
+                                </div>
+                                <h5>The main function is eleminfo(). The function will display a periodic table of
+                                    elements for eleminfo(0). Currently, only one element can be selected for
+                                    information. Another use of the function is to either type in an element name or
+                                    symbol. The name or symbol must be string, i.e. eleminfo('He'). For element symbols,
+                                    the first letter must be capitalized.</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <a class="portfolio-box">
+                        <img src="/img/portfolio/3.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Photography
+                                </div>
+                                <div class="project-name">
+                                    Coming Soon
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-</section>
+    <section class="section">
+        <div class="grid">
+            <div class="item item--large portfolio-box" id="flix-with-friends"
+                 style="background-image: url('/img/portfolio/FLIX_W_FRIENDS_1.jpg');"
+                 onclick="navigatTo('https://github.com/Return0Software/Flix-with-Friends')">
+                <div class="portfolio-box-caption">
+                    <div class="portfolio-box-caption-content">
+                        <div class="project-category text-faded">
+                            Python
+                        </div>
+                        <div class="project-name">
+                            Flix with Friends
+                        </div>
+                        <h5>Flix with Friends is a program that helps users decide what movie they should watch. It
+                            reads through spreadsheets or Google Sheets that have names of movies that users would like
+                            to watch. The program searches through a movie database to pull descriptions, ratings and
+                            various poster sizes to present in an IMDb-like interface to help users decide on what movie
+                            to watch based on search criteria like keywords, release date, rating and which of the users
+                            has seen the movie.</h5>
+                    </div>
+                </div>
+                <div class="item__details">
+                    Flix with Friends
+                </div>
+
+            </div>
+            <div class="item item--large portfolio-box" style="background-image: url('/img/portfolio/chem.png')"
+                 onclick="navigatTo('https://github.com/JosephMart/Periodic-Table')">
+                <div class="portfolio-box-caption">
+                    <div class="portfolio-box-caption-content">
+                        <div class="project-category text-faded">
+                            Matlab
+                        </div>
+                        <div class="project-name">
+                            Periodic Table GUI
+                        </div>
+                        <h5>The main function is eleminfo(). The function will display a periodic table of elements for
+                            eleminfo(0). Currently, only one element can be selected for information. Another use of the
+                            function is to either type in an element name or symbol. The name or symbol must be string,
+                            i.e. eleminfo('He'). For element symbols, the first letter must be capitalized.</h5>
+                    </div>
+                </div>
+                <div class="item__details">
+                    Periodic Table GUI
+                </div>
+            </div>
+            <div class="item item--large portfolio-box" style="background-image: url('/img/portfolio/3.jpg')">
+                <div class="portfolio-box-caption">
+                    <div class="portfolio-box-caption-content">
+                        <div class="project-category text-faded">
+                            Photography
+                        </div>
+                        <div class="project-name">
+                            Coming Soon
+                        </div>
+                    </div>
+                </div>
+                <div class="item__details">
+                    Photography
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
 
   
 <section id="contact" class="contact bg-primary">
     <div class="container">
-        <h2>Follow Me</h2>
+        <h2>Contact Me</h2>
         <ul class="list-inline list-social">
             
             <li class="social-twitter">
@@ -285,11 +472,11 @@
             </li>
         
             <li class="social-google-plus">
-                <a target="_blank" rel="nofollow" href="https://plus.google.com/106225828783118807082" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus google-plus"></i></a>
+                <a target="_blank" rel="nofollow" href="https://google.com/+JosephMartinsen" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus google-plus"></i></a>
             </li>
         
             <li class="social-github">
-                <a target="_blank" rel="nofollow" href="http://github.com/JosephMart" class="btn-social btn-outline"><i class="fa fa-fw fa-github github"></i></a>
+                <a target="_blank" rel="nofollow" href="https://github.com/JosephMart" class="btn-social btn-outline"><i class="fa fa-fw fa-github github"></i></a>
             </li>
         
             <li class="social-linkedin">
@@ -297,17 +484,7 @@
             </li>
         
         </ul>
-        <!-- <ul class="list-inline list-social">
-            <li class="social-twitter">
-                <a href="#"><i class="fa fa-twitter"></i></a>
-            </li>
-            <li class="social-facebook">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-            </li>
-            <li class="social-google-plus">
-                <a href="#"><i class="fa fa-google-plus"></i></a>
-            </li>
-        </ul> -->
+        <h3><a href="joseph-resume.pdf" target="_blank">Email is on the Resume!</a></h3>
     </div>
 </section>
 <footer>
@@ -344,7 +521,7 @@
 <script src="/js/wow.min.js"></script>
 
 <!-- Custom Theme JavaScript -->
-<script src="/js/creative.js"></script>
+<!-- <script src="/js/creative.js"></script> -->
 
 <!-- jQuery
 <script src="/vendor/jquery/jquery.min.js"></script> -->
@@ -358,7 +535,8 @@
 <!-- Theme JavaScript -->
 <script src="/js/new-age.min.js"></script>
 
-
+<!-- Personal JavaScript -->
+<script src="/js/personal.js"></script>
 
 </body>
 
