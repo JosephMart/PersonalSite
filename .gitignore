@@ -1,3 +1,11 @@
-_site/*
 node_modules/*
 .sass-cache/*
+/_site/
+.idea/inspectionProfiles/
+.idea/modules.xml
+.idea/my_site.iml
+.idea/preferred-vcs.xml
+.idea/vcs.xml
+.idea/workspace.xml
+img/mathnasium.svg
+package-lock.json
