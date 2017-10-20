@@ -1,5 +1,4 @@
 node_modules/*
-.sass-cache/*
 /_site/
 .idea/inspectionProfiles/
 .idea/modules.xml
@@ -9,3 +8,4 @@ node_modules/*
 .idea/workspace.xml
 img/mathnasium.svg
 package-lock.json
+/.sass-cache/
