@@ -6,7 +6,7 @@
   "author": "Joseph Martinsen <joseph@martinsen.com>",
   "scripts": {
     "dev": "gulp dev | jekyll build --watch",
-    "build": "jekyll build"
+    "build": "gulp | jekyll build"
   },
   "license": "MIT",
   "devDependencies": {
@@ -20,8 +20,7 @@
     "gulp-less": "^3.3.2",
     "gulp-load-plugins": "^1.5.0",
     "gulp-rename": "^1.2.2",
-    "gulp-uglify": "^3.0.0",
-    "run-sequence": "^2.2.0"
+    "gulp-uglify": "^3.0.0"
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
