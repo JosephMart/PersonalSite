@@ -5,7 +5,7 @@
   "repository": "git@github.com:JosephMart/my_site.git",
   "author": "Joseph Martinsen <joseph@martinsen.com>",
   "scripts": {
-    "dev": "gulp dev | jekyll build --watch",
+    "dev": "gulp dev | jekyll build --watch --drafts",
     "build": "gulp | jekyll build"
   },
   "license": "MIT",
