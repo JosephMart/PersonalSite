@@ -1,34 +1,31 @@
 {
   "name": "my_site",
-  "title": "Joseph Martinsn Personal Site",
   "version": "1.0.0",
-  "homepage": "http://startbootstrap.com/template-overviews/new-age",
-  "author": "Start Bootstrap",
+  "main": "index.js",
+  "repository": "git@github.com:JosephMart/my_site.git",
+  "author": "Joseph Martinsen <joseph@martinsen.com>",
   "scripts": {
     "dev": "gulp dev | jekyll build --watch",
     "build": "jekyll build"
   },
-  "license": {
-    "type": "MIT",
-    "url": "https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE"
-  },
+  "license": "MIT",
   "devDependencies": {
-    "bootstrap": "^3.3.7",
-    "browser-sync": "^2.13.0",
-    "font-awesome": "^4.6.3",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
-    "gulp-clean-css": "^2.0.10",
-    "gulp-header": "^1.8.7",
-    "gulp-less": "^3.1.0",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-header": "^1.8.9",
+    "gulp-less": "^3.3.2",
+    "gulp-load-plugins": "^1.5.0",
     "gulp-rename": "^1.2.2",
-    "gulp-uglify": "^1.5.4",
-    "jquery": "^1.11.3"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/BlackrockDigital/startbootstrap-new-age.git"
+    "gulp-uglify": "^3.0.0",
+    "run-sequence": "^2.2.0"
   },
   "dependencies": {
-    "simple-line-icons": "^2.3.2"
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.2.1"
   }
 }
