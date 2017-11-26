@@ -1,10 +1,15 @@
 # Joseph Martinsen's site
 
-## Contribution Guide
+## Running the site locally
 
-1. Install `Gulp`, `npm`, `ruby`, and `ruby-devel` are installed
-2. Install the following gems: `jekyll-feed` and `jekyll-paginate`
-3. To run
+Ensure you have `yarn`, `ruby`, and `ruby-devel` installed
+
+```bash
+yarn global add gulp       # Install gulp globally
+yarn install               # Install npm packages
+gem install jekyll bundler # Install `jekyll` and `bundle`
+bundle install             # Install ruby gems
 ```
-npm run dev
-```
+If you want to run live reloading server: `gulp dev`
+
+If you want to build static site: `gulp`

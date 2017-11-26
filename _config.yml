@@ -1,16 +1,11 @@
 # Site settings
 title: Joseph Martinsen
 author_name: Joseph Martinsen
-email:
 description: Joseph Martinsen Personal Website
 
 baseurl: "" # the subpath of your site, e.g. /blog/ (If you use organization leave empty)
 url: "https://joseph.martinsen.com" # the base hostname & protocol for your site
 
-# Tags
-photoTag: "Photography"
-
-# Social networks usernames (many more available: flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.) see all icon at fontawesome.io
 social:
   - title: twitter
     url: https://twitter.com/nbahoopstar05

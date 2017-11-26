@@ -2,15 +2,30 @@
 import gulp from 'gulp'
 import browserSync from'browser-sync'
 import gulpLoadPlugins from 'gulp-load-plugins'
+import childProcess from 'child_process'
+import runSequence from 'run-sequence'
 import pkg from'./package.json'
 
+// Load all gulp-x plugins
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
+
+// BrowserSync Settings
 const browserSyncSettings = {
     notify: false,
     logPrefix: 'JMM',
     server: {baseDir: 'build'},
 };
+
+// Log Jekyll Output if it is not blank
+const jekyllLogger = (buffer) => {
+    buffer.toString()
+        .split(/\n/)
+        .map((message) => {
+            if(message) {$.util.log('Jekyll: ' + message)}
+      });
+};
+
 // Set the banner content
 const banner = ['/*!\n',
     ' * Joseph\'s Site - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
@@ -78,16 +93,32 @@ gulp.task('copy', (done) => {
     done();
 });
 
-// Run everything
-gulp.task('default', ['less', 'minify-css', 'minify-js', 'copy']);
+// Jekyll Build
+gulp.task('jekyll-build', (done) => {
+    const jekyllBuild = childProcess.spawn('bundle', ['exec', 'jekyll', 'build']);
+    jekyllBuild.stdout.on('data', jekyllLogger);
+    jekyllBuild.stderr.on('data', jekyllLogger);
+    done();
+});
 
-// Configure the browserSync task
-gulp.task('browserSync', () => (
-    browserSync(browserSyncSettings)
-));
+// Build everything
+gulp.task('default', ['less', 'minify-css', 'minify-js', 'copy'], (done) => {
+    runSequence('jekyll-build', done);
+});
 
 // Dev task with browserSync
-gulp.task('dev', ['browserSync', 'less', 'minify-css', 'minify-js'], () => {
+gulp.task('dev', ['less', 'minify-css', 'minify-js'], () => {
+    const jekyllWatch = childProcess.spawn('bundle', ['exec',
+        'jekyll',
+        'build',
+        '--watch',
+        '--incremental',
+        '--drafts'
+    ]);
+    jekyllWatch.stdout.on('data', jekyllLogger);
+    jekyllWatch.stderr.on('data', jekyllLogger);
+    
+    browserSync(browserSyncSettings);
     gulp.watch('app/less/*.less', ['less']);
     gulp.watch('app/css/*.css', ['minify-css']);
     gulp.watch('app/js/*.js', ['minify-js']);
