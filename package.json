@@ -2,12 +2,12 @@
   "name": "my_site",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@github.com:JosephMart/my_site.git",
+  "repository": "git@github.com:JosephMart/PersonalSite.git",
   "author": "Joseph Martinsen <joseph@martinsen.com>",
   "babel": {
     "presets": [
       "es2015"
-    ],
+    ]
   },
   "scripts": {
     "dev": "gulp dev",
