@@ -1,6 +1,52 @@
 # Joseph Martinsen's site
 
-## Running the site locally
+## Technologies Used
+<p align="center">
+  <a href="https://babeljs.io/">
+    <img height="100" src="https://raw.githubusercontent.com/babel/logo/master/babel.png">
+  </a>
+</p>
+<p align="center">
+  <a href="http://gulpjs.com">
+    <img height="100" src="https://raw.githubusercontent.com/gulpjs/artwork/master/gulp-2x.png">
+  </a>
+</p>
+<p align="center">
+  <a href="http://sass-lang.com">
+    <img height="100" src="http://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg">
+  </a>
+</p>
+<p align="center">
+  <a href="http://lesscss.org">
+    <img height="100" src="http://lesscss.org/public/img/logo.png">
+  </a>
+</p>
+<p align="center">
+  <a href="https://yarnpkg.com">
+    <img height="100" src="https://heroku-blog-files.s3.amazonaws.com/posts/1488416188-yarn-logo.png">
+  </a>
+</p>
+<p align="center">
+  <a href="https://jekyllrb.com/">
+    <img height="100" src="https://jekyllrb.com/img/logo-2x.png">
+  </a>
+</p>
+<p align="center">
+  <a href="http://bundler.io/">
+    <img height="100" src="http://bundler.io/images/header_transparent_bg.png">
+  </a>
+</p>
+<p align="center">
+  <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5">
+    <img height="100" src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png">
+  </a>
+</p>
+<p align="center">
+  <a href="http://www.css3.info/">
+    <img height="100" src="http://code.naustud.io/code-guide/img/css-logo.svg">
+  </a>
+</p>
+## Setting up Development Environment
 
 Ensure you have `yarn`, `ruby`, and `ruby-devel` installed
 
