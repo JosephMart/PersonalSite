@@ -123,6 +123,6 @@ gulp.task('dev', ['less', 'minify-css', 'minify-js'], () => {
     gulp.watch('app/css/*.css', ['minify-css']);
     gulp.watch('app/js/*.js', ['minify-js']);
     // Reloads the browser whenever HTML or JS files change
-    gulp.watch('build/*.html', reload);
+    gulp.watch('build/**/*.html', reload);
     gulp.watch('build/js/**/*.js', reload);
 });
