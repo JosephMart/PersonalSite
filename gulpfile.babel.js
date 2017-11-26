@@ -1,4 +1,5 @@
 'use strict'
+import del from 'del'
 import gulp from 'gulp'
 import pkg from'./package.json'
 import browserSync from'browser-sync'
@@ -49,6 +50,11 @@ gulp.task('minify-js', () => {
     }));
 });
 
+gulp.task('clean', (done) => {
+    del(["build", "app/vendor", "app/.jekyll-metadata", ".sass-cache"]);
+    done();
+});
+
 // Copy vendor libraries from /node_modules into /vendor
 gulp.task('copy', (done) => {
     // Bootstrap
@@ -90,7 +96,8 @@ gulp.task('default', ['minify-js', 'copy'], (done) => {
 });
 
 // Dev task with browserSync
-gulp.task('dev', ['minify-js', 'copy'], () => {
+gulp.task('dev', () => {
+    runSequence('clean', ['minify-js', 'copy']);
     const jekyllWatch = childProcess.spawn('bundle', ['exec',
         'jekyll',
         'build',
@@ -103,6 +110,7 @@ gulp.task('dev', ['minify-js', 'copy'], () => {
     
     browserSync(browserSyncSettings);
     gulp.watch('app/js/*.js', ['minify-js']);
-    // Reloads the browser whenever HTML or JS files change
+    // Reloads the browser whenever HTML or CSS files change
     gulp.watch('build/**/*.html', reload);
+    gulp.watch('build/**/*.css', reload);
 });
