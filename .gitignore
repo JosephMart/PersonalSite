@@ -1,4 +1,4 @@
 /node_modules/
-/_site/
+/build/
 /.idea/
 /.sass-cache/
