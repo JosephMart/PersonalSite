@@ -1,10 +1,10 @@
 'use strict'
 import gulp from 'gulp'
-import browserSync from'browser-sync'
-import gulpLoadPlugins from 'gulp-load-plugins'
-import childProcess from 'child_process'
-import runSequence from 'run-sequence'
 import pkg from'./package.json'
+import browserSync from'browser-sync'
+import runSequence from 'run-sequence'
+import childProcess from 'child_process'
+import gulpLoadPlugins from 'gulp-load-plugins'
 
 // Load all gulp-x plugins
 const $ = gulpLoadPlugins();
@@ -27,69 +27,52 @@ const jekyllLogger = (buffer) => {
 };
 
 // Set the banner content
-const banner = ['/*!\n',
+const banner = ['/*\n',
     ' * Joseph\'s Site - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
     ' * Copyright 2015-' + (new Date()).getFullYear(), ' <%= pkg.author %>\n',
-    ' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n',
     ' */\n',
     ''
 ].join('');
 
-// Compile LESS files from /less into /css
-gulp.task('less', () => (
-    gulp.src('app/less/new-age.less')
-        .pipe($.less())
-        .pipe($.header(banner, { pkg: pkg }))
-        .pipe(gulp.dest('app/css'))
-        .pipe(reload({
-            stream: true
-        }))
-));
-
-// Minify compiled CSS
-gulp.task('minify-css', ['less'], ()  => (
-    gulp.src('app/css/new-age.css')
-        .pipe($.cleanCss({ compatibility: 'ie8' }))
-        .pipe($.rename({ suffix: '.min' }))
-        .pipe(gulp.dest('app/css'))
-        .pipe(reload({
-            stream: true
-        }))
-));
-
 // Minify JS
-gulp.task('minify-js', () => (
-    gulp.src('app/js/new-age.js')
+gulp.task('minify-js', () => {
+    gulp.src([
+          'app/js/**/*.js',
+          '!app/js/**/*.min.js',
+        ])
         .pipe($.uglify())
         .pipe($.header(banner, { pkg: pkg }))
         .pipe($.rename({ suffix: '.min' }))
-        .pipe(gulp.dest('app/js'))
+        .pipe(gulp.dest('build/js'))
         .pipe(reload({
             stream: true
-        }))
-));
+    }));
+});
 
 // Copy vendor libraries from /node_modules into /vendor
 gulp.task('copy', (done) => {
-    gulp.src(['node_modules/bootstrap/dist/**/*', '!**/npm.js', '!**/bootstrap-theme.*', '!**/*.map'])
+    // Bootstrap
+    gulp.src(['node_modules/bootstrap/dist/**/*.min.*', '!**/npm.js', '!**/bootstrap-theme.*', '!**/*.map'])
         .pipe(gulp.dest('app/vendor/bootstrap'));
+    gulp.src(['node_modules/bootstrap/dist/fonts/**/*'])
+        .pipe(gulp.dest('app/vendor/bootstrap/fonts'))
 
-    gulp.src(['node_modules/jquery/dist/jquery.js', 'node_modules/jquery/dist/jquery.min.js'])
+    // jQuery
+    gulp.src(['node_modules/jquery/dist/jquery.min.js'])
         .pipe(gulp.dest('app/vendor/jquery'));
 
-    gulp.src(['node_modules/simple-line-icons/*/*'])
-        .pipe(gulp.dest('app/vendor/simple-line-icons'));
-
-
+    // FontAwesome
     gulp.src([
-            'node_modules/font-awesome/**',
-            '!node_modules/font-awesome/**/*.map',
-            '!node_modules/font-awesome/.npmignore',
-            '!node_modules/font-awesome/*.txt',
-            '!node_modules/font-awesome/*.md',
-            '!node_modules/font-awesome/*.json'
+            'node_modules/font-awesome/**/*min.css',
+            'node_modules/font-awesome/**/fonts/**',
         ])
         .pipe(gulp.dest('app/vendor/font-awesome'));
+
+    // WowJS
+    gulp.src([
+            'node_modules/wowjs/dist/wow.min.js',
+        ])
+        .pipe(gulp.dest('app/vendor/wowjs'));
     done();
 });
 
@@ -102,12 +85,12 @@ gulp.task('jekyll-build', (done) => {
 });
 
 // Build everything
-gulp.task('default', ['less', 'minify-css', 'minify-js', 'copy'], (done) => {
+gulp.task('default', ['minify-js', 'copy'], (done) => {
     runSequence('jekyll-build', done);
 });
 
 // Dev task with browserSync
-gulp.task('dev', ['less', 'minify-css', 'minify-js'], () => {
+gulp.task('dev', ['minify-js', 'copy'], () => {
     const jekyllWatch = childProcess.spawn('bundle', ['exec',
         'jekyll',
         'build',
@@ -119,10 +102,7 @@ gulp.task('dev', ['less', 'minify-css', 'minify-js'], () => {
     jekyllWatch.stderr.on('data', jekyllLogger);
     
     browserSync(browserSyncSettings);
-    gulp.watch('app/less/*.less', ['less']);
-    gulp.watch('app/css/*.css', ['minify-css']);
     gulp.watch('app/js/*.js', ['minify-js']);
     // Reloads the browser whenever HTML or JS files change
     gulp.watch('build/**/*.html', reload);
-    gulp.watch('build/js/**/*.js', reload);
 });

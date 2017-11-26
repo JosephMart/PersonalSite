@@ -25,5 +25,8 @@ markdown: kramdown
 highlighter: rouge
 permalink: pretty
 paginate: 5
-exclude: ["less","node_modules","gulpfile.babel.js","package.json","README.md", "yarn.lock", "LICENSE"]
+exclude: ["js","node_modules","gulpfile.babel.js","package.json","README.md", "yarn.lock", "LICENSE"]
 plugins: [jekyll-paginate, jekyll-feed]
+sass:
+    style: compressed
+keep_files: ["js"]
