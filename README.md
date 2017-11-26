@@ -46,6 +46,12 @@
     <img height="100" src="http://code.naustud.io/code-guide/img/css-logo.svg">
   </a>
 </p>
+<p align="center">
+  <a href="https://www.javascript.com/">
+    <img height="100" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/2000px-Unofficial_JavaScript_logo_2.svg.png">
+  </a>
+</p>
+
 ## Setting up Development Environment
 
 Ensure you have `yarn`, `ruby`, and `ruby-devel` installed
