@@ -24,6 +24,8 @@ social:
     url: https://www.linkedin.com/in/joseph-martinsen/
 
 # Build settings
+source: app
+destination: build
 markdown: kramdown
 highlighter: rouge
 permalink: pretty
