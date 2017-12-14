@@ -17,13 +17,8 @@
   </a>
 </p>
 <p align="center">
-  <a href="http://lesscss.org">
-    <img height="100" src="http://lesscss.org/public/img/logo.png">
-  </a>
-</p>
-<p align="center">
   <a href="https://yarnpkg.com">
-    <img height="100" src="https://heroku-blog-files.s3.amazonaws.com/posts/1488416188-yarn-logo.png">
+    <img height="100" src="https://yarnpkg.com/assets/og_image.png">
   </a>
 </p>
 <p align="center">
